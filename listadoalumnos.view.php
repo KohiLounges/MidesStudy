@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resoluciones</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Listado de Alumnos | Registro de Notas</title>
+    <meta name="description" content="Registro de Notas de la E.N.S N°10" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
     <div class="Resolucion">
@@ -23,13 +24,6 @@ $alumnos = $conn->prepare("select a.id, a.num_lista, a.nombres, a.apellidos, a.g
 $alumnos->execute();
 $alumnos = $alumnos->fetchAll();
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Listado de Alumnos | Registro de Notas</title>
-    <meta name="description" content="Registro de Notas de la E.N.S N°10" />
-    <link rel="stylesheet" href="css/style.css" />
-</head>
 <body>
 <div class="header">
         <h1>Registro de Notas - E.N.S N°10</h1>
