@@ -3,19 +3,15 @@ if(!$_POST){
     header('location: alumnos.view.php');
 }
 else {
-    //incluimos el archivo para hacer la conexion
     require 'functions.php';
-    //Recuperamos los valores que vamos a llenar en la BD
     $id_materia = htmlentities($_POST ['id_materia']);
     $id_grado = htmlentities($_POST ['id_grado']);
     $id_seccion = htmlentities($_POST ['id_seccion']);
     $num_eval = htmlentities($_POST ['num_eval']);
     $num_alumnos = htmlentities($_POST['num_alumnos']);
 
-    //insertar es el nombre del boton guardar que esta en el archivo notas.view.php
     if (isset($_POST['insertar'])){
 
-        /*Recorro el numero de estudiantes*/
         for($i = 0; $i < $num_alumnos; $i++){
             $id_alumno = htmlentities($_POST['id_alumno' . $i]);
             //por cada estudiante se recorre el numero de evaluaciones para extraer la nota de cada una

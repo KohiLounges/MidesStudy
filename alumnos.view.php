@@ -83,7 +83,6 @@ $grados = $grados->fetchAll();
             <br><br>
             <button type="submit" name="insertar">Guardar</button> <button type="reset">Limpiar</button> <a class="btn-link" href="listadoalumnos.view.php">Ver Listado</a>
             <br><br>
-            <!-- Mostrando los mensajes que recibe a través de los parámetros en la URL -->
             <?php
             if (isset($_GET['err']))
                 echo '<span class="error">Error al almacenar el registro</span>';

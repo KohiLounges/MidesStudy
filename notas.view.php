@@ -58,8 +58,8 @@ if(isset($_GET['revisar'])){
             var valor = input.value;
             if (isNaN(valor) || valor < 1 || valor > 10) {
                 alert("Por favor, ingrese un número válido entre 1 y 10 para la nota.");
-                input.value = ""; // Limpiar el campo
-                input.focus(); // Devolver el foco al campo
+                input.value = ""; 
+                input.focus(); 
             }
         }
     </script>
@@ -151,11 +151,9 @@ if(isset($_GET['revisar'])){
                     <th>Eliminar</th>
                 </tr>
                 <?php foreach ($alumnos as $index => $alumno) :?>
-                    <!-- campos ocultos necesarios para realizar el insert-->
                     <input type="hidden" value="<?php echo $num_alumnos ?>" name="num_alumnos">
                     <input type="hidden" value="<?php echo $alumno['id'] ?>" name="<?php echo 'id_alumno'.$index ?>">
                     <input type="hidden" value="<?php echo $num_eval ?>" name="num_eval">
-                     <!-- campos para devolver los parametros en el get y mantener los mismos datos al hacer el header location-->
                     <input type="hidden" value="<?php echo $id_materia ?>" name="id_materia">
                     <input type="hidden" value="<?php echo $id_grado ?>" name="id_grado">
                     <input type="hidden" value="<?php echo $id_seccion ?>" name="id_seccion">
@@ -164,7 +162,6 @@ if(isset($_GET['revisar'])){
                         <td><?php echo $alumno['nombres'] ?></td>
                         <?php
                            if(existeNota($alumno['id'],$id_materia,$conn) > 0){
-                                //ya tiene notas registradas
                                 $notas = $conn->prepare("select id, nota from notas where id_alumno = ".$alumno['id']." and id_materia = ".$id_materia);
                                 $notas->execute();
                                 $registrosnotas = $notas->fetchAll();
@@ -213,7 +210,6 @@ if(isset($_GET['revisar'])){
             <?php
         }
         ?>
-        <!--mostrando los mensajes que recibe a través de los parámetros en la url-->
         <?php
         if(isset($_GET['err']))
             echo '<span class="error">Error al almacenar el registro</span>';

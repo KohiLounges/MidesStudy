@@ -22,7 +22,6 @@ require 'functions.php';
 
 $permisos = ['Administrador','Profesor'];
 permisos($permisos);
-//consulta los alumnos para el listaddo de alumnos
 $alumnos = $conn->prepare("select a.id, a.num_lista, a.nombres, a.apellidos, a.genero, b.nombre as grado, c.nombre as seccion from alumnos as a inner join grados as b on a.id_grado = b.id inner join secciones as c on a.id_seccion = c.id order by a.apellidos");
 $alumnos->execute();
 $alumnos = $alumnos->fetchAll();
@@ -95,7 +94,6 @@ $alumnos = $alumnos->fetchAll();
 
                 <a class="btn-link" href="alumnos.view.php">Agregar Alumno</a>
                 <br><br>
-                <!--mostrando los mensajes que recibe a traves de los parametros en la url-->
                 <?php
                 if(isset($_GET['err']))
                     echo '<span class="error">Error al almacenar el registro</span>';

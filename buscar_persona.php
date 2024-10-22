@@ -1,5 +1,4 @@
 <?php
-// Conecta a la base de datos (asegúrate de incluir tus credenciales correctas)
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -11,11 +10,9 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Recupera el D.N.I ingresado por el usuario
 if (isset($_POST['dni'])) {
-    $dni = mysqli_real_escape_string($conn, $_POST['dni']); // Escapa el D.N.I
+    $dni = mysqli_real_escape_string($conn, $_POST['dni']); 
 
-    // Consulta SQL para buscar la persona por D.N.I
     $sql = "SELECT alumnos.nombres, grados.nombre AS curso, secciones.nombre AS seccion FROM alumnos
             INNER JOIN grados ON alumnos.id_grado = grados.id
             INNER JOIN secciones ON alumnos.id_seccion = secciones.id
@@ -36,7 +33,6 @@ if (isset($_POST['dni'])) {
         echo "Error en la consulta SQL: " . $conn->error;
     }
 
-    // Consulta SQL para obtener las notas del alumno
     $notas_query = "SELECT materias.nombre AS materia, notas.nota, notas.observaciones
                FROM notas
                INNER JOIN materias ON notas.id_materia = materias.id
@@ -109,7 +105,6 @@ if (isset($_POST['dni'])) {
             if (isset($notas_result) && $notas_result->num_rows > 0) {
                 $notas_por_materia = [];
                 while ($row = $notas_result->fetch_assoc()) {
-                    // Agrupamos las notas por materia
                     $materia = $row["materia"];
                     if (!isset($notas_por_materia[$materia])) {
                         $notas_por_materia[$materia] = [
@@ -120,7 +115,6 @@ if (isset($_POST['dni'])) {
                     $notas_por_materia[$materia]['notas'][] = $row['nota'];
                 }
 
-                // Ahora mostramos las materias y sus respectivas notas
                 foreach ($notas_por_materia as $materia => $datos) {
                     $notas = $datos['notas'];
                     $observaciones = $datos['observaciones'];

@@ -7,15 +7,9 @@
     <title>Registro de Notas- ENS N°10</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-</body>
 </html>
 
-
-
 <?php
-//arreglo con mensajes que puede recibir
 $messages = [
     "1" => "Credenciales incorrectas",
     "2" => "No ha iniciado sesión"

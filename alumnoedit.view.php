@@ -63,7 +63,6 @@ if (isset($_GET['id'])) {
     <div class="panel">
         <h4>Edición de Alumnos</h4>
         <form method="post" class="form" action="procesaralumno.php">
-            <!-- Colocamos un campo oculto que tiene el id del alumno -->
             <input type="hidden" value="<?php echo $alumno['id'] ?>" name="id">
             <label>Nombres</label><br>
             <input type="text" required name="nombres" value="<?php echo $alumno['nombres'] ?>" maxlength="45">
@@ -103,7 +102,6 @@ if (isset($_GET['id'])) {
             <br><br>
             <button type="submit" name="modificar">Guardar Cambios</button> <a class="btn-link" href="listadoalumnos.view.php">Ver Listado</a>
             <br><br>
-            <!-- Mostrando los mensajes que recibe a través de los parámetros en la URL -->
             <?php
             if (isset($_GET['err']))
                 echo '<span class="error">Error al editar el registro</span>';

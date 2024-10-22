@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if($users->rowCount() > 0){
         $user = $users->fetch();
         if($user['username'] == $username && $user['password'] == $password){
-            //existe el usuario y esa contrase;a
+            //existe el usuario y esa contraseña
             session_start();
             $_SESSION["username"] = $username;
             $_SESSION["rol"] = $user['rol'];
@@ -30,7 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     http_response_code(405);
     echo "SOLO SE PUEDE POST";
 
-    // POST_GET
 }
 
 
