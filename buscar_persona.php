@@ -88,8 +88,6 @@ if (isset($_POST['dni'])) {
             echo "<p>División: $seccion</p>";
         }
         ?>
-
-        <!-- Tabla de notas -->
         <h2>Notas del Alumno</h2>
         <table border="1" cellpadding="5" cellspacing="0">
             <tr>

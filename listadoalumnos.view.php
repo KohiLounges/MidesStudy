@@ -14,9 +14,6 @@
 </body>
 </html>
 
-
-
-
 <?php
 require 'functions.php';
 
@@ -100,7 +97,6 @@ $alumnos = $alumnos->fetchAll();
                 if(isset($_GET['info']))
                     echo '<span class="success">Registro almacenado correctamente!</span>';
                 ?>
-
 
         </div>
 </div>

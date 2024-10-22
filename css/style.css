@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'Panton'; 
+  src: url('/font/Panton-BlackCaps.otf') format('truetype');
+}
+
 html, body {
-  font-family: Arial, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -24,7 +29,7 @@ html, body {
   margin: 0 auto;
   padding: 40px;
   min-height: 500px;
-  font-family: 'Panton-BlackCaps' /* Asegura que el cuerpo use la fuente */
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Asegura que el cuerpo use la fuente */
 }
 
 span.error {

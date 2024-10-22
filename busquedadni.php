@@ -20,7 +20,6 @@
     <div class="header">
         <h1>Buscar Personas por DNI</h1>
         <img src="images/logo.png" style="width: 100px; height: 100px" />
-
     </div>
     <nav>
         <ul>

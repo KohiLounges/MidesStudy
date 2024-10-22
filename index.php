@@ -38,15 +38,12 @@ $messages = [
   right: 20px;
 }
 </style>
-
 </head>
 
 <body>
 <div class="header">
-
         <h1>Registro de Notas - E.N.S N°10</h1>
         <img src="images/logo.png" style="width: 100px; height: 100px" />
-
 </div>
 
 <div class="body">
