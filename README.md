@@ -9,7 +9,6 @@
 - **Interfaz Amigable**: MidesStudy cuenta con un diseño intuitivo y fácil de usar, adaptable tanto para usuarios con poca experiencia como para gestores más avanzados.
 - **Seguridad de los Datos**: Toda la información está almacenada de manera segura en una base de datos MySQL, asegurando la protección de los datos de los estudiantes.
 - **Escalabilidad**: El proyecto está diseñado para crecer y adaptarse a las necesidades cambiantes de las instituciones educativas, permitiendo agregar más funcionalidades según sea necesario.
-- **Diseño Responsivo**: La plataforma está optimizada para dispositivos móviles y de escritorio, asegurando una experiencia fluida en cualquier dispositivo.
 
 ## Instalación
 
